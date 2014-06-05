@@ -31,16 +31,18 @@ Redmine::Plugin.register :redmine_stealth do
   }
 
   name        'Redmine Stealth plugin'
-  author      'Riley Lynch'
+  author      'Riley Lynch (mod by Andre Greeff)'
   description 'Enables users to disable Redmine email notifications ' +
               'for their actions'
-  version     '0.6.0'
+  version     '0.6.1-DEV'
 
   if respond_to?(:url)
-    url 'http://teleological.github.com/redmine_stealth'
+    # url 'http://teleological.github.com/redmine_stealth'
+    url 'http://github.com/zalithka/redmine_stealth'
   end
   if respond_to?(:author_url)
-    author_url 'http://github.com/teleological'
+    # author_url 'http://github.com/teleological'
+    author_url 'http://github.com/zalithka'
   end
 
   permission :toggle_stealth_mode, :stealth => :toggle
