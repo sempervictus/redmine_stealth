@@ -19,8 +19,7 @@ require 'redmine_stealth/hooks'
 Redmine::Plugin.register :redmine_stealth do
 
   extend Redmine::I18n
-
-  plugin_locale_glob = respond_to?(:directory) ?
+  plugin_locale_glob = (respond_to?(:directory) and !directory.nil?) ?
     File.join(directory, 'config', 'locales', '*.yml') :
     File.join(Rails.root, 'vendor', 'plugins',
               'redmine_stealth', 'config', 'locales', '*.yml')
